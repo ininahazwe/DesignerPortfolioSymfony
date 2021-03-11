@@ -12,3 +12,6 @@ Site pour un créateur de mode
 * Docker
 * Docker-compose
 
+### Lancer des test
+
+php bin/phpunit --testdox
