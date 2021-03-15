@@ -23,3 +23,7 @@ symfony console doctrine:fixtures:load
 ```bash
 php bin/phpunit --testdox
 ```
+### Mise en place de la pagination
+```bash
+composer require knplabs/knp-paginator-bundle
+```
