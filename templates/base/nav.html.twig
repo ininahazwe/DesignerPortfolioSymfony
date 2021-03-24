@@ -1,44 +1,31 @@
-<!-- Navbar STart -->
-<header id="topnav" class="defaultscroll sticky">
-    <div class="container">
-        <!-- Logo container-->
-        <div>
-            <a class="logo" href="#">
-                <img src="/img/logo-dark.png" height="24" alt="">
-            </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div class="buy-button">
-            <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>
-        </div><!--end login button-->
-        <!-- End Logo container-->
-        <div class="menu-extras">
-            <div class="menu-item">
-                <!-- Mobile menu toggle-->
-                <a class="navbar-toggle">
-                    <div class="lines">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </a>
-                <!-- End mobile menu toggle-->
-            </div>
-        </div>
-
-        <div id="navigation">
-            <!-- Navigation Menu-->
-            <ul class="navigation-menu">
-                <li class="has-submenu active">
-                    <a href="{{ path('home') }}">Home</a>
-                </li>
-                <li class="has-submenu">
-                    <a href="{{ path('realisations') }}">Réalisations</a>
-                </li>
-                <li class="has-submenu">
-                    <a href="{{ path('actualites') }}">Blog</a>
-                </li>
-            </ul><!--end navigation menu-->
-        </div><!--end navigation-->
-    </div><!--end container-->
-</header><!--end header-->
-<!-- Navbar End -->
+    </div>
+</nav>

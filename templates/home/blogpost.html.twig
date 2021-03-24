@@ -1,49 +1,16 @@
-<!--Blog Lists Start-->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            {% for blogpost in blogposts %}
-            <div class="col-lg-6 col-12 mb-4 pb-2">
-                <div class="card blog rounded border-0 shadow overflow-hidden">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-md-6">
-                            <img src="images/work/14.jpg" class="img-fluid" alt="">
-                            <div class="overlay bg-dark"></div>
-                            <div class="author">
-                                <small class="text-light user d-block"><i class="mdi mdi-account"></i> auteur </small>
-                                <small class="text-light date"><i class="mdi mdi-calendar-check"></i> {{ blogpost.createdAt | date('d-m-Y') }}</small>
-                            </div>
-                        </div><!--end col-->
-
-                        <div class="col-md-6">
-                            <div class="card-body content">
-                                <h5><a href="javascript:void(0)" class="card-title title text-dark">{{ blogpost.titre }}</a></h5>
-                                <p class="text-muted mb-0">{{ blogpost.contenu }}</p>
-                                <div class="post-meta d-flex justify-content-between mt-3">
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                        <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                    </ul>
-                                    <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="mdi mdi-chevron-right"></i></a>
-                                </div>
-                            </div>
-                        </div><!--end col-->
-                    </div> <!--end row-->
-                </div><!--end blog post-->
-            </div><!--end col-->
-            {% endfor %}
-            <!-- PAGINATION START -->
-            <div class="col-12">
-                <ul class="pagination justify-content-center mb-0">
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
-                    <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Next">Next</a></li>
-                </ul>
-            </div><!--end col-->
-            <!-- PAGINATION END -->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section -->
-<!--Blog Lists End-->
+{% for blogpost in blogposts %}
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="..." alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ blogpost.titre }}</h5>
+                <p class="card-text">{{ blogpost.contenu }}</p>
+                <p class="card-text"><small class="text-muted">{{ blogpost.createdAt | date('d-m-Y') }}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

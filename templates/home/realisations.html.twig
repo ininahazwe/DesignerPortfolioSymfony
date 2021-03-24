@@ -1,32 +1,19 @@
-<!-- Start -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <ul class="col container-filter list-unstyled categories-filter text-center mb-0" id="filter">
-                <li class="list-inline-item"><a class="categories border d-block text-dark rounded active" data-filter="*">All</a></li>
-                <li class="list-inline-item"><a class="categories border d-block text-dark rounded" data-filter=".branding">Branding</a></li>
-                <li class="list-inline-item"><a class="categories border d-block text-dark rounded" data-filter=".designing">Designing</a></li>
-                <li class="list-inline-item"><a class="categories border d-block text-dark rounded" data-filter=".photography">Photography</a></li>
-                <li class="list-inline-item"><a class="categories border d-block text-dark rounded" data-filter=".development">Development</a></li>
-            </ul>
-        </div><!--end row-->
-
-        <div class="row projects-wrapper">
-            {% for blogpost in blogposts %}
-            <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2 branding">
-                <div class="card border-0 work-container work-classic">
-                    <div class="card-body p-0">
-                        <a href="page-work-detail.html"><img src="{{ blogpost.file }}" class="img-fluid rounded work-image" alt=""></a>
-                        <div class="content pt-3">
-                            <h5 class="mb-0"><a href="page-work-detail.html" class="text-dark title">{{ blogpost.titre }}</a></h5>
-                            <h6 class="text-muted tag mb-0">{{ blogpost.contenu }}</h6>
+<div class="container">
+    <div class="row">
+        {% for blogpost in blogposts %}
+            <div class="card mb-3 mt-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="..." alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ blogpost.titre }}</h5>
+                            <p class="card-text">{{ blogpost.contenu }}</p>
+                            <p class="card-text"><small class="text-muted">{{ blogpost.createdAt | date('d-m-Y') }}</small></p>
                         </div>
                     </div>
                 </div>
-            </div><!--end col-->
-            {% endfor %}
-
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section-->
-<!-- End -->
+            </div>
+        {% endfor %}
+    </div>
