@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 vh-md-100 mx-auto">
+                <aside class="flex-grow-1 py-8 py-md-1O">
+                    <div>
+                        <h2>{{ produit.nom }}</h2>
+                        {% for categorie in produit.categorie %}
+                            <span class="badge bg-secondary">{{ categorie.nom }}</span>
+                        {% endfor %}
+                    </div>
+                    <p class="fs-lg mb-7 text-muted">
+                        {{ produit.description }}
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h6 class="d-flex mb-0 text-uppercase">
+                                Couleur
+                                <span class="ms-auto">{{ produit.couleur }}</span>
+                            </h6>
+                        </li>
+                        {% if produit.enVente %}
+                        <li class="list-group-item">
+                            <h6 class="d-flex mb-0 text-uppercase">En vente
+                                <span class="ms-auto">{{ produit.prix }}$</span>
+                            </h6>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
